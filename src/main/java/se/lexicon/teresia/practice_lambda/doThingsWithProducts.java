@@ -1,4 +1,4 @@
-package se.lexicon.teresia.practice_lambda.git;
+package se.lexicon.teresia.practice_lambda;
 
 public class doThingsWithProducts implements Action, Conditional  {
 

@@ -1,4 +1,4 @@
-package se.lexicon.teresia.practice_lambda.git;
+package se.lexicon.teresia.practice_lambda;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
