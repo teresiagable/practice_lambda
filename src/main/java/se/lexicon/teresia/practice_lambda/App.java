@@ -11,22 +11,26 @@ public class App
     	List<Product>theProducts = new ArrayList<>();
         fillProducts(theProducts);
         
-        System.out.println("Print all products");
-        for (Product product : theProducts) {
+        
+        
+		System.out.println("Print all products");
+		for (Product product : theProducts) {
 			System.out.println(product);
 		}
-        System.out.println("Print all in stock");
-        doThingsWithProducts(theProducts, p->p.getStock()>0,p->System.out.println(p));
-        
-        System.out.println("Products stats with a B");
-        doThingsWithProducts(theProducts, p->p.getProductName().charAt(0)=='B',p->System.out.println(p));
-        
-        System.out.println("Price between 100 and 150 (excluding)");
-        doThingsWithProducts(theProducts, p->p.getPrice()>=100 && p.getPrice()<=150,p->System.out.println(p));
-        
-        System.out.println("Raise Price and print");
-        doThingsWithProducts(theProducts, p->p.getStock()<10,p->{p.setPrice(p.getPrice()*1.5);System.out.println(p);});
+		System.out.println("Print all in stock");
+		doThingsWithProducts(theProducts, p -> p.getStock() > 0, p -> System.out.println(p));
 
+		System.out.println("Products stats with a B");
+		doThingsWithProducts(theProducts, p -> p.getProductName().charAt(0) == 'B', p -> System.out.println(p));
+
+		System.out.println("Price between 100 and 150 (excluding)");
+		doThingsWithProducts(theProducts, p -> p.getPrice() >= 100 && p.getPrice() <= 150, p -> System.out.println(p));
+
+		System.out.println("Raise Price and print");
+		doThingsWithProducts(theProducts, p -> p.getStock() < 10, p -> {
+			p.setPrice(p.getPrice() * 1.5);
+			System.out.println(p);
+		});
         
     }
 
